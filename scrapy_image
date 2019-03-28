@@ -18,7 +18,7 @@ while t < 500:
     try:
         pic = requests.get(each, timeout=10)
     except requests.exceptions.ConnectionError:
-        print('【错误】当前图片无法下载')
+        print('Error：couldn't download')
         continue
     fp = open(path + str(t) + str(i) +'%d.jpg','wb')
     fp.write(pic.content)
